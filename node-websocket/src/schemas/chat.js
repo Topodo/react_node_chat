@@ -1,10 +1,9 @@
 import { Schema } from 'mongoose';
 import { model as Model } from 'mongoose';
-var Message = require('./message').default.schema
-var ObjectId = require('mongoose').Types.ObjectId
+import { messageSchema as Message } from './message'
 
 // Defines schema for Chat model
-const chatSchema = new Schema({
+export const chatSchema = new Schema({
     chatName: String,
     messages: [Message]
 }, { timestamps: true })

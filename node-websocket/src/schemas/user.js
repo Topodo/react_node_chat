@@ -1,6 +1,6 @@
 import { Schema } from 'mongoose';
 import { model as Model } from 'mongoose';
-var Chat = require('./chat').default.schema
+import { chatSchema as Chat } from './chat'
 
 // Defines the schema for the model
 const userSchema = new Schema({

@@ -2,7 +2,8 @@ import { Schema } from 'mongoose';
 import { model as Model } from 'mongoose';
 
 // Defines schema for Message model
-const messageSchema = new Schema({
+export const messageSchema = new Schema({
+    authorId: Schema.Types.ObjectId,
     author: String,
     message: String,
 }, { timestamps: true })
